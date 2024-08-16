@@ -8,11 +8,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { YoutubeThumbnailCardComponent } from './components/youtube-thumbnail-card/youtube-thumbnail-card.component';
 import { VideoPlayerComponent } from '../views/video-player/video-player.component';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
+import { MenuYouComponent } from './components/sidebar/menu-you/menu-you.component';
+import { CardShortComponent } from './components/card-short/card-short.component';
 
 const sharedComponents = [
   TopComponent,
   SidebarComponent,
-  YoutubeThumbnailCardComponent
+  YoutubeThumbnailCardComponent,
+  VideoPlayerComponent,
+  MenuYouComponent,
+  CardShortComponent
 ]
 
 const sharedModules = [
@@ -21,18 +26,22 @@ const sharedModules = [
   HttpClientModule
 ]
 
+const sharedPipes = [
+  SafeUrlPipe,
+]
+
 @NgModule({
   declarations: [
     ...sharedComponents,
-    VideoPlayerComponent,
-    SafeUrlPipe
+    ...sharedPipes,
   ],
   imports: [
     CommonModule,
     sharedModules
   ],
   exports: [
-    ...sharedComponents
+    ...sharedComponents,
+    ...sharedPipes
   ]
 })
 export class SharedModule { }

@@ -35,7 +35,7 @@ body{
 
 @for $i from 1 through 12 {
   .col-#{$i} {
-    padding: 15px;
+    padding: 10px 15px;
     width: 100%;
 
     @media (min-width: 48em) {
