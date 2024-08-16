@@ -101,18 +101,14 @@ $padding-base: 20px;
         }
 
         .subscribe-button {
-          background-color: $primary-color;
-          color: #fff;
-          padding: 10px 20px;
-          font-size: 14px;
-          font-weight: bold;
+          background-color: $background-color;
           border: none;
-          border-radius: 2px;
+          border-radius: 20px;
+          color: #333;
+          font-size: 14px;
+          font-weight: 400;
+          padding: 0px 20px;
           cursor: pointer;
-
-          &:hover {
-            background-color: $hover-color;
-          }
         }
       }
     }

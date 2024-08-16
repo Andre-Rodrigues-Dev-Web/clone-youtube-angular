@@ -87,13 +87,16 @@ $desktop: 48em;
         .links {
           border-bottom: 1px solid #ffffff33;
           margin-top: 0.8em;
-          min-height: 130px;
+          min-height: 110px;
           li {
+            border-radius: 10px;
             width: calc(100% - 12px);
             &.active, &:hover{
               background-color: #333;
             }
-            border-radius: 10px;
+            &:last-child{
+              margin-bottom: 10px;
+            }
             a {
               font-size: clamp(0.7em, 0.98em, 1.4em);
               line-height: 30px;

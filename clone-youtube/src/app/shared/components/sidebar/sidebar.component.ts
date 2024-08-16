@@ -30,7 +30,6 @@ export class SidebarComponent {
   loadSVGs() {
     this.menuItems.forEach((item, index) => {
       this.http.get(item.icon, { responseType: 'text' }).subscribe(svgData => {
-        console.log('SVG Data:', svgData);
         this.menuItems[index].svg = svgData;
       });
     });
